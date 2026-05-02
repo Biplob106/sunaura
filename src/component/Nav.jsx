@@ -4,7 +4,7 @@ import NavLink from "./NavLink";
 const Nav = () => {
   return (
     <div className="">
-      <div className="navbar bg-base-100 shadow-sm ">
+      <div className="navbar bg-base-100 shadow-sm  ">
         <div className="navbar-start">
 
           <a className="btn btn-ghost text-xl">daisyUI</a>

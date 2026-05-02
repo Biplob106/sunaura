@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/1X9K4Z9k/sunglasses.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Summer Beach Hat",
+    "brand": "CoolWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 15,
+    "description": "Lightweight beach hat that protects from harsh sunlight.",
+    "image": "https://i.postimg.cc/7Y9QKZkT/beach-hat.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Men's Cotton Summer T-Shirt",
+    "brand": "FreshFit",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Breathable cotton t-shirt ideal for hot summer days.",
+    "image": "https://i.postimg.cc/9F6vXyqZ/mens-tshirt.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Women's Floral Summer Dress",
+    "brand": "BloomStyle",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Beautiful floral dress designed for comfort and style.",
+    "image": "https://i.postimg.cc/yx5T9t0F/womens-dress.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "SunGuard",
+    "price": 10,
+    "rating": 4.9,
+    "stock": 30,
+    "description": "High protection sunscreen to keep your skin safe from UV rays.",
+    "image": "https://i.postimg.cc/8kGkWm1y/sunscreen.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 6,
+    "name": "Beach Flip Flops",
+    "brand": "WalkEasy",
+    "price": 9,
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Comfortable flip flops perfect for beach walks.",
+    "image": "https://i.postimg.cc/76zXQ8xv/flipflops.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 7,
+    "name": "Portable Water Bottle",
+    "brand": "HydroMax",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Durable water bottle to keep you hydrated during summer.",
+    "image": "https://i.postimg.cc/W4Hq9GZk/water-bottle.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 8,
+    "name": "Beach Towel",
+    "brand": "SoftWave",
+    "price": 16,
+    "rating": 4.7,
+    "stock": 22,
+    "description": "Soft and absorbent beach towel with vibrant colors.",
+    "image": "https://i.postimg.cc/VkP8W3Fz/beach-towel.png",
+    "category": "Beach Essentials"
+  },
+  {
+    "id": 9,
+    "name": "Cooling Face Mist",
+    "brand": "FreshGlow",
+    "price": 11,
+    "rating": 4.5,
+    "stock": 17,
+    "description": "Refreshing face mist that cools and hydrates your skin.",
+    "image": "https://i.postimg.cc/5y9pR1rK/face-mist.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 10,
+    "name": "Summer Backpack",
+    "brand": "TravelLite",
+    "price": 28,
+    "rating": 4.6,
+    "stock": 14,
+    "description": "Lightweight backpack perfect for travel and beach trips.",
+    "image": "https://i.postimg.cc/4xqGx7Zq/backpack.png",
+    "category": "Accessories"
+  }
+]

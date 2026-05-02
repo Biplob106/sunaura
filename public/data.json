@@ -7,7 +7,7 @@
     "rating": 4.7,
     "stock": 10,
     "description": "Stylish UV protection sunglasses perfect for summer outings.",
-    "image": "https://i.postimg.cc/1X9K4Z9k/sunglasses.png",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800",
     "category": "Accessories"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.5,
     "stock": 15,
     "description": "Lightweight beach hat that protects from harsh sunlight.",
-    "image": "https://i.postimg.cc/7Y9QKZkT/beach-hat.png",
+    "image": "https://images.unsplash.com/photo-1520975922284-7f6d3f3c3f1e?w=800",
     "category": "Accessories"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "stock": 20,
     "description": "Breathable cotton t-shirt ideal for hot summer days.",
-    "image": "https://i.postimg.cc/9F6vXyqZ/mens-tshirt.png",
+    "image": "https://images.unsplash.com/photo-1520975958225-8b5f3f4c0c2b?w=800",
     "category": "Clothing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.8,
     "stock": 12,
     "description": "Beautiful floral dress designed for comfort and style.",
-    "image": "https://i.postimg.cc/yx5T9t0F/womens-dress.png",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800",
     "category": "Clothing"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.9,
     "stock": 30,
     "description": "High protection sunscreen to keep your skin safe from UV rays.",
-    "image": "https://i.postimg.cc/8kGkWm1y/sunscreen.png",
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800",
     "category": "Skincare"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.4,
     "stock": 25,
     "description": "Comfortable flip flops perfect for beach walks.",
-    "image": "https://i.postimg.cc/76zXQ8xv/flipflops.png",
+    "image": "https://images.unsplash.com/photo-1528701800489-20be3c8f2f1f?w=800",
     "category": "Footwear"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.6,
     "stock": 18,
     "description": "Durable water bottle to keep you hydrated during summer.",
-    "image": "https://i.postimg.cc/W4Hq9GZk/water-bottle.png",
+    "image": "https://images.unsplash.com/photo-1526401485004-2aa6bfa5a3c1?w=800",
     "category": "Accessories"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.7,
     "stock": 22,
     "description": "Soft and absorbent beach towel with vibrant colors.",
-    "image": "https://i.postimg.cc/VkP8W3Fz/beach-towel.png",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
     "category": "Beach Essentials"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.5,
     "stock": 17,
     "description": "Refreshing face mist that cools and hydrates your skin.",
-    "image": "https://i.postimg.cc/5y9pR1rK/face-mist.png",
+    "image": "https://images.unsplash.com/photo-1620917669809-1b2f6f1c2c98?w=800",
     "category": "Skincare"
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.6,
     "stock": 14,
     "description": "Lightweight backpack perfect for travel and beach trips.",
-    "image": "https://i.postimg.cc/4xqGx7Zq/backpack.png",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
     "category": "Accessories"
   }
 ]

@@ -1,24 +1,8 @@
 import ProductCard from "../../component/ProductCard";
+import productsData from "../../../public/data.json";
 
-const ProductPage = async () => {
-  let products = [];
-
-  try {
-    const res = await fetch(`${process.env.BETTER_AUTH_URL || "http://localhost:3000"}/data.json`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) throw new Error("Failed to fetch products");
-
-    products = await res.json();
-  } catch (error) {
-    console.error(error);
-    return (
-      <div className="min-h-screen flex items-center justify-center text-red-500">
-        Failed to load products. Please try again later.
-      </div>
-    );
-  }
+const ProductPage = () => {
+  const products = productsData;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">

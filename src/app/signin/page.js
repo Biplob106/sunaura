@@ -1,13 +1,16 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { GrGoogle } from "react-icons/gr";
 import { MdEmail, MdLock, MdErrorOutline } from "react-icons/md";
 
-export default function SignInPage() {
+function SignInForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -24,12 +27,12 @@ export default function SignInPage() {
     if (error) {
       setError(error.message || "Invalid email or password. Please try again.");
     } else {
-      window.location.href = "/";
+      window.location.href = callbackUrl;
     }
   };
 
   const handleGoogleSignIn = async () => {
-    await authClient.signIn.social({ provider: "google", callbackURL: "/" });
+    await authClient.signIn.social({ provider: "google", callbackURL: callbackUrl });
   };
 
   return (
@@ -127,5 +130,13 @@ export default function SignInPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense>
+      <SignInForm />
+    </Suspense>
   );
 }

@@ -1,11 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import HeroBanner from "@/component/HeroBanner";
-import products from "../../public/data.json";
 
-const popularProducts = products
-  .sort((a, b) => b.rating - a.rating)
-  .slice(0, 3);
+async function getPopularProducts() {
+  const res = await fetch(`${process.env.BETTER_AUTH_URL}/api/proxy/data.json`, {
+    next: { revalidate: 3600 },
+  });
+  const products = await res.json();
+  return products.sort((a, b) => b.rating - a.rating).slice(0, 3);
+}
+
+const popularProducts = await getPopularProducts();
 
 const careTips = [
   {
@@ -39,29 +44,21 @@ const brands = [
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-4 pb-20">
-
-      {/* ─── Hero Banner ─── */}
+    <div className="max-w-7xl mx-auto px-2 sm:px-4 pb-20">
       <HeroBanner />
 
-      {/* ─── Popular Products ─── */}
-      <section className="mt-16">
-        <div className="flex items-center justify-between mb-8">
+      <section className="mt-12 sm:mt-16">
+        <div className="flex items-center justify-between mb-6 sm:mb-8">
           <div>
-            <h2 className="text-3xl font-extrabold text-gray-800">
-              🔥 Popular Products
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800">🔥 Popular Products</h2>
             <p className="text-gray-500 text-sm mt-1">Top-rated summer picks loved by shoppers</p>
           </div>
-          <Link
-            href="/products"
-            className="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline"
-          >
+          <Link href="/products" className="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline whitespace-nowrap">
             View All →
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {popularProducts.map((product) => (
             <div key={product.id} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all overflow-hidden group">
               <div className="relative w-full aspect-square overflow-hidden">
@@ -76,14 +73,14 @@ export default function Home() {
                   ⭐ {product.rating}
                 </span>
               </div>
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <p className="text-xs text-gray-400 font-medium mb-1">{product.brand}</p>
-                <h3 className="text-base font-bold text-gray-800 mb-3">{product.name}</h3>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-extrabold text-sky-600">${product.price.toFixed(2)}</span>
+                <h3 className="text-sm sm:text-base font-bold text-gray-800 mb-3">{product.name}</h3>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-lg sm:text-xl font-extrabold text-sky-600">${product.price.toFixed(2)}</span>
                   <Link
                     href={`/products/${product.id}`}
-                    className="px-4 py-2 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 transition-all shadow-sm"
+                    className="px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 transition-all shadow-sm"
                   >
                     View Details
                   </Link>
@@ -94,19 +91,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Summer Care Tips ─── */}
-      <section className="mt-20">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-800">🌤️ Summer Care Tips</h2>
+      <section className="mt-16 sm:mt-20">
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800">🌤️ Summer Care Tips</h2>
           <p className="text-gray-500 text-sm mt-2">Stay healthy, fresh, and glowing all season long</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {careTips.map((tip) => (
-            <div
-              key={tip.title}
-              className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all text-center group"
-            >
+            <div key={tip.title} className="bg-white border border-gray-100 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-all text-center group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{tip.icon}</div>
               <h3 className="font-bold text-gray-800 mb-2 text-sm">{tip.title}</h3>
               <p className="text-gray-500 text-xs leading-relaxed">{tip.desc}</p>
@@ -115,27 +108,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Top Brands ─── */}
-      <section className="mt-20">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-800">🏆 Top Brands</h2>
+      <section className="mt-16 sm:mt-20">
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800">🏆 Top Brands</h2>
           <p className="text-gray-500 text-sm mt-2">Trusted names for your summer needs</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
           {brands.map((brand) => (
             <div
               key={brand.name}
-              className={`bg-gradient-to-br ${brand.bg} border ${brand.border} rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer`}
+              className={`bg-gradient-to-br ${brand.bg} border ${brand.border} rounded-2xl p-4 sm:p-6 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer`}
             >
-              <div className="text-4xl mb-3">{brand.emoji}</div>
-              <h3 className="font-extrabold text-gray-800 text-base">{brand.name}</h3>
+              <div className="text-3xl sm:text-4xl mb-3">{brand.emoji}</div>
+              <h3 className="font-extrabold text-gray-800 text-sm sm:text-base">{brand.name}</h3>
               <p className="text-gray-500 text-xs mt-1">{brand.tagline}</p>
             </div>
           ))}
         </div>
       </section>
-
     </div>
   );
 }

@@ -48,41 +48,37 @@ const HeroBanner = () => {
   const slide = slides[current];
 
   return (
-    <div className={`relative bg-gradient-to-br ${slide.gradient} transition-all duration-700 rounded-2xl overflow-hidden mx-4 mt-6 shadow-xl`}>
-      {/* Decorative blobs */}
+    <div className={`relative bg-gradient-to-br ${slide.gradient} transition-all duration-700 rounded-2xl overflow-hidden mx-2 sm:mx-4 mt-6 shadow-xl`}>
       <div className="absolute top-[-60px] right-[-60px] w-72 h-72 bg-white/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-[-40px] left-[-40px] w-56 h-56 bg-white/10 rounded-full blur-2xl pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-12 md:py-16 gap-8">
-        {/* Text */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 sm:px-8 md:px-16 py-10 md:py-16 gap-6">
         <div className="text-white max-w-lg text-center md:text-left">
-          <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-semibold tracking-wide mb-4">
+          <span className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-semibold tracking-wide mb-3 sm:mb-4">
             {slide.tag}
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-2">
             {slide.title}
           </h1>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white/90 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white/90 mb-3 sm:mb-4">
             {slide.highlight}
           </h2>
-          <p className="text-white/80 text-base md:text-lg mb-8 max-w-md">
+          <p className="text-white/80 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md">
             {slide.subtitle}
           </p>
           <Link
             href={slide.href}
-            className="inline-block px-8 py-3 bg-white text-gray-800 font-bold rounded-xl shadow-lg hover:bg-gray-100 transition-all hover:scale-105 text-sm"
+            className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-gray-800 font-bold rounded-xl shadow-lg hover:bg-gray-100 transition-all hover:scale-105 text-sm"
           >
             {slide.cta} →
           </Link>
         </div>
 
-        {/* Big emoji */}
-        <div className="text-[120px] md:text-[160px] leading-none select-none">
+        <div className="text-[80px] sm:text-[120px] md:text-[160px] leading-none select-none">
           {slide.emoji}
         </div>
       </div>
 
-      {/* Dot indicators */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, i) => (
           <button

@@ -2,7 +2,8 @@
 import { authClient } from "@/lib/auth-client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { MdEmail, MdPerson, MdCalendarToday, MdVerified } from "react-icons/md";
+import Link from "next/link";
+import { MdEmail, MdPerson, MdCalendarToday, MdVerified, MdEdit } from "react-icons/md";
 
 const ProfilePage = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -34,7 +35,7 @@ const ProfilePage = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 sm:py-12 px-3 sm:px-4">
       <div className="max-w-2xl mx-auto">
-        <div className="bg-gradient-to-br from-sky-500 via-teal-500 to-cyan-600 rounded-3xl p-6 sm:p-8 text-white text-center relative overflow-hidden shadow-xl mb-6">
+        <div className="animate__animated animate__fadeInDown bg-gradient-to-br from-sky-500 via-teal-500 to-cyan-600 rounded-3xl p-6 sm:p-8 text-white text-center relative overflow-hidden shadow-xl mb-6">
           <div className="absolute top-[-60px] right-[-60px] w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
           <div className="absolute bottom-[-40px] left-[-40px] w-36 h-36 bg-teal-400/20 rounded-full blur-2xl pointer-events-none" />
 
@@ -49,7 +50,7 @@ const ProfilePage = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 divide-y divide-gray-100">
+        <div className="animate__animated animate__fadeInUp bg-white rounded-3xl shadow-sm border border-gray-100 divide-y divide-gray-100 mb-6">
           <InfoRow icon={<MdPerson className="text-sky-500 text-xl" />} label="Full Name" value={user.name} />
           <InfoRow icon={<MdEmail className="text-sky-500 text-xl" />} label="Email Address" value={user.email} />
           <InfoRow
@@ -62,6 +63,16 @@ const ProfilePage = () => {
             }
           />
           <InfoRow icon={<MdCalendarToday className="text-sky-500 text-xl" />} label="Joined" value={joinedDate} />
+        </div>
+
+        <div className="animate__animated animate__fadeInUp text-center">
+          <Link
+            href="/profile/update"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold text-white bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 transition-all shadow-md"
+          >
+            <MdEdit className="text-lg" />
+            Update Information
+          </Link>
         </div>
       </div>
     </div>

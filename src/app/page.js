@@ -3,11 +3,17 @@ import Image from "next/image";
 import HeroBanner from "@/component/HeroBanner";
 
 async function getPopularProducts() {
-  const res = await fetch(`${process.env.BETTER_AUTH_URL}/api/proxy/data.json`, {
-    next: { revalidate: 3600 },
-  });
-  const products = await res.json();
-  return products.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  try {
+    const res = await fetch("https://sunaura.vercel.app/data.json", {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return [];
+    const products = await res.json();
+    if (!Array.isArray(products)) return [];
+    return products.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  } catch {
+    return [];
+  }
 }
 
 const popularProducts = await getPopularProducts();

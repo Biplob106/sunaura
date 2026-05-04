@@ -3,11 +3,12 @@ import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 import Link from "next/link";
 import { GrGoogle } from "react-icons/gr";
-import { MdEmail, MdLock, MdPerson, MdImage, MdErrorOutline } from "react-icons/md";
+import { MdEmail, MdLock, MdPerson, MdImage, MdErrorOutline, MdVisibility, MdVisibilityOff } from "react-icons/md";
 
 export default function SignUpPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -132,11 +133,18 @@ export default function SignUpPage() {
               <MdLock className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xl" />
               <input
                 name="password"
-                type="password"
+                type={showPassword ? "text" : "password"}
                 required
                 placeholder="Min 8 chars, 1 uppercase, 1 number"
-                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent transition"
+                className="w-full pl-10 pr-10 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent transition"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-sky-500 transition-colors"
+              >
+                {showPassword ? <MdVisibilityOff className="text-xl" /> : <MdVisibility className="text-xl" />}
+              </button>
             </div>
             <p className="text-xs text-gray-400 mt-1.5 ml-1">
               Must be at least 8 characters with 1 uppercase letter and 1 number

@@ -2,7 +2,6 @@
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { authClient } from "@/lib/auth-client";
-import Image from "next/image";
 import Link from "next/link";
 import { MdStar, MdInventory2, MdCategory, MdStorefront, MdArrowBack } from "react-icons/md";
 
@@ -73,14 +72,11 @@ const ProductDetails = () => {
 
         <div className="bg-white rounded-3xl shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-2">
 
-          {/* Image */}
-          <div className="relative aspect-square bg-gray-100">
-            <Image
+          <div className="relative aspect-square bg-gray-100 overflow-hidden">
+            <img
               src={product.image}
-              fill
               alt={product.name}
-              className="object-cover"
-              unoptimized
+              className="w-full h-full object-cover"
             />
             <span className="absolute top-4 left-4 bg-sky-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
               {product.category}

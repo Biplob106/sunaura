@@ -1,17 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ product }) => {
   return (
     <div className="card bg-base-100 shadow-md hover:shadow-lg transition">
-
-      {/* Image */}
-      <figure className="relative w-full aspect-square">
-        <Image
+      <figure className="w-full aspect-square overflow-hidden">
+        <img
           src={product.image}
-          fill
           alt={product.name}
-          className="object-cover"
+          className="w-full h-full object-cover"
         />
       </figure>
 

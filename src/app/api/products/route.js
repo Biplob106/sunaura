@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const DATA_URL = "https://sunaura.vercel.app/data.json";
+const DATA_URL = `${process.env.BETTER_AUTH_URL || "http://localhost:3000"}/data.json`;
 
 export async function GET() {
   const res = await fetch(DATA_URL, { next: { revalidate: 3600 } });

@@ -7,7 +7,7 @@
     "rating": 4.7,
     "stock": 10,
     "description": "Stylish UV protection sunglasses perfect for summer outings.",
-    "image": "https://source.unsplash.com/800x800/?sunglasses",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=800&fit=crop&auto=format",
     "category": "Accessories"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.5,
     "stock": 15,
     "description": "Lightweight beach hat that protects from harsh sunlight.",
-    "image": "https://source.unsplash.com/800x800/?beach-hat",
+    "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=800&h=800&fit=crop&auto=format",
     "category": "Accessories"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "stock": 20,
     "description": "Breathable cotton t-shirt ideal for hot summer days.",
-    "image": "https://source.unsplash.com/800x800/?tshirt",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop&auto=format",
     "category": "Clothing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.8,
     "stock": 12,
     "description": "Beautiful floral dress designed for comfort and style.",
-    "image": "https://source.unsplash.com/800x800/?summer-dress",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&h=800&fit=crop&auto=format",
     "category": "Clothing"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.9,
     "stock": 30,
     "description": "High protection sunscreen to keep your skin safe from UV rays.",
-    "image": "https://source.unsplash.com/800x800/?sunscreen",
+    "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=800&fit=crop&auto=format",
     "category": "Skincare"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.4,
     "stock": 25,
     "description": "Comfortable flip flops perfect for beach walks.",
-    "image": "https://source.unsplash.com/800x800/?flip-flops",
+    "image": "https://images.unsplash.com/photo-1562183241-840b8af0721e?w=800&h=800&fit=crop&auto=format",
     "category": "Footwear"
   },
   {
@@ -73,7 +73,7 @@
     "rating": 4.6,
     "stock": 18,
     "description": "Durable water bottle to keep you hydrated during summer.",
-    "image": "https://source.unsplash.com/800x800/?water-bottle",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&h=800&fit=crop&auto=format",
     "category": "Accessories"
   },
   {
@@ -84,7 +84,7 @@
     "rating": 4.7,
     "stock": 22,
     "description": "Soft and absorbent beach towel with vibrant colors.",
-    "image": "https://source.unsplash.com/800x800/?beach-towel",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=800&fit=crop&auto=format",
     "category": "Beach Essentials"
   },
   {
@@ -95,7 +95,7 @@
     "rating": 4.5,
     "stock": 17,
     "description": "Refreshing face mist that cools and hydrates your skin.",
-    "image": "https://source.unsplash.com/800x800/?face-mist",
+    "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&h=800&fit=crop&auto=format",
     "category": "Skincare"
   },
   {
@@ -106,7 +106,7 @@
     "rating": 4.6,
     "stock": 14,
     "description": "Lightweight backpack perfect for travel and beach trips.",
-    "image": "https://source.unsplash.com/800x800/?backpack",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=800&fit=crop&auto=format",
     "category": "Accessories"
   }
 ]

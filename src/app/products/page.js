@@ -4,7 +4,7 @@ const ProductPage = async () => {
   let products = [];
 
   try {
-    const res = await fetch("https://sunaura.vercel.app/data.json", {
+    const res = await fetch(`${process.env.BETTER_AUTH_URL || "http://localhost:3000"}/data.json`, {
       next: { revalidate: 3600 },
     });
 

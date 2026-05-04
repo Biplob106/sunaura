@@ -43,11 +43,14 @@ const UpdateProfilePage = () => {
     setError("");
     setSuccess(false);
 
-    const { error: updateError } = await authClient.updateUser({ name, image });
+    const updateData = { name: name.trim() };
+    if (image.trim()) updateData.image = image.trim();
+
+    const { error: updateError } = await authClient.updateUser(updateData);
 
     setLoading(false);
     if (updateError) {
-      setError(updateError.message || "Failed to update profile.");
+      setError(updateError.message || "Failed to update profile. Please try again.");
     } else {
       setSuccess(true);
       setTimeout(() => router.push("/profile"), 1500);

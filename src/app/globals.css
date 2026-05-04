@@ -1,4 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
+:root {
+  --color-primary: oklch(0.6 0.18 210);
+  --color-primary-content: oklch(1 0 0);
+}

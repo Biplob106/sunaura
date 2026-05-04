@@ -1,18 +1,15 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 const NavLink = ({ href, className, children }) => {
   const pathname = usePathname();
-  console.log(pathname, "pathname");
-
   const isActive = href === pathname;
 
   return (
     <Link
       href={href}
-      className={`${isActive ? "border-b-2 border-b-purple-500" : ""} ${className}`}
+      className={`transition-colors hover:text-sky-600 ${isActive ? "text-sky-600 font-semibold border-b-2 border-sky-500" : "text-gray-600"} ${className ?? ""}`}
     >
       {children}
     </Link>

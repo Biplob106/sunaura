@@ -36,7 +36,10 @@ export default function SignUpPage() {
       return;
     }
 
-    const { data, error } = await authClient.signUp.email({ name, email, password, image });
+    const signUpData = { name, email, password };
+    if (image) signUpData.image = image;
+
+    const { data, error } = await authClient.signUp.email(signUpData);
 
     setLoading(false);
 

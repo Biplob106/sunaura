@@ -136,7 +136,7 @@ const UpdateProfilePage = () => {
             className="w-full py-3 rounded-2xl font-semibold text-white bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 transition-all shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? (
-              <span className="loading loading-spinner loading-sm" />
+              <span className="loading loading-spinner loading-sm"   />
             ) : (
               "Update Information"
             )}
